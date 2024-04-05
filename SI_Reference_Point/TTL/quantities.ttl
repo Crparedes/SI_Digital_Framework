@@ -58,6 +58,16 @@ quantities:AMSC a si:QuantityKind ;
     skos:prefLabel "amount of substance concentration "@en,
         "concentration de quantité de matière"@fr .
 
+quantities:AMSM a si:QuantityKind ;
+    si:hasUnit [ a si:UnitProduct ;
+            si:hasLeftUnitTerm units:mole ;
+            si:hasRightUnitTerm [ a si:UnitPower ;
+                    si:hasNumericExponent "-1"^^xsd:short ;
+                    si:hasUnitBase units:kilogram ] ] ;
+    skos:altLabel "AMSM"^^xsd:string ;
+    skos:prefLabel "amount of substance per unit mass "@en,
+        "quantité de matière par unité de masse"@fr .
+
 quantities:AMSU a si:QuantityKind ;
     si:hasUnit units:mole ;
     skos:altLabel "AMSU"^^xsd:string ;
